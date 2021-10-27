@@ -1,0 +1,21 @@
+
+<table class="table table-sm table-secondary">
+  <thead>
+    <tr  class=table-warning>
+      <th scope="col">FirstName</th>
+      <th scope="col">LastName</th>
+      <th scope="col">Age</th>
+       <th scope="col">All_details</th>
+      <th scope="col">Remote</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let student of students" >
+    <tr>
+      <td>{{student.firstName}}</td>
+        <td>{{student.lastName}}</td>
+        <td>{{student.age}}</td>
+        <td><button  class="btn btn-success" (click)="click(student.id)">More </button></td>
+        <td><button   class="btn btn-danger" (click)="deleteStudent(student.id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
